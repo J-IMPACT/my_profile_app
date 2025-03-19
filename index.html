@@ -13,8 +13,21 @@
 
     <!-- styles.cssを適用 (CSSの適用方法) -->
     <link data-trunk rel="css" href="styles.css">
+
+    <script>
+        (function() {
+            const path = window.location.pathname;
+            if (!path.startsWith("/my_profile_app/#/") && path !== "/my_profile_app/") {
+                window.location.replace("/my_profile_app/#/");
+            }
+        })
+    </script>
 </head>
 <body class="container bg-light">
-    <script type="module" src="./main.rs"></script>
+    <!-- Trunkで生成されたWebAssemblyアプリを読み込む -->
+    <script type="module">import init from './my_profile_app.js'; init();</script>
+
+    <!-- BootstrapのJS（モバイルナビゲーションの動作用） -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
