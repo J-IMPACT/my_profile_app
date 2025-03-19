@@ -13,13 +13,26 @@
 
     <!-- styles.cssを適用 (CSSの適用方法) -->
     <link rel="stylesheet" href="/my_profile_app/styles-c48f97d0d3db51.css" integrity="sha384-cM/g9+gxXnu4SPCOHG2EP1Gj49fXnXeziZlP/dWhmD3xGWUdkMsVlhYh3vAsEFEu"/>
-<link rel="modulepreload" href="/my_profile_app/my_profile_app-7800ffc32c1b736f.js" crossorigin="anonymous" integrity="sha384-n7JepWbHeiz62h01Fg7SAYYLxGSAeU3WdrucvhbMZPPB/LrEGbj83YmX+liwr8A3"><link rel="preload" href="/my_profile_app/my_profile_app-7800ffc32c1b736f_bg.wasm" crossorigin="anonymous" integrity="sha384-zU9KuXPcZgHAXO+m7rA9wLBD4jdEVjVC/Kx25rbewui48ZTMG2pgAu/B728SSUUG" as="fetch" type="application/wasm"></head>
+
+    <script>
+        (function() {
+            const path = window.location.pathname;
+            if (!path.startsWith("/my_profile_app/#/") && path !== "/my_profile_app/") {
+                window.location.replace("/my_profile_app/#/");
+            }
+        })
+    </script>
+<link rel="modulepreload" href="/my_profile_app/my_profile_app-19d9985bea938563.js" crossorigin="anonymous" integrity="sha384-RNehOtKReutf9twLFvqy/QCUHs8/ks+/AGlyE5bx5hGfHkZjDtty+IPb9S6UYCxR"><link rel="preload" href="/my_profile_app/my_profile_app-19d9985bea938563_bg.wasm" crossorigin="anonymous" integrity="sha384-OCiaO5loWrrzcZF+ALVA8DPAnedL+WIyCBVxjLGJ8D1YbXJjPrbtrUieqHU+k8cc" as="fetch" type="application/wasm"></head>
 <body class="container bg-light">
-    <script type="module" src="./main.rs"></script>
+    <!-- Trunkで生成されたWebAssemblyアプリを読み込む -->
+    <script type="module">import init from './my_profile_app.js'; init();</script>
+
+    <!-- BootstrapのJS（モバイルナビゲーションの動作用） -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script type="module">
-import init, * as bindings from '/my_profile_app/my_profile_app-7800ffc32c1b736f.js';
-const wasm = await init({ module_or_path: '/my_profile_app/my_profile_app-7800ffc32c1b736f_bg.wasm' });
+import init, * as bindings from '/my_profile_app/my_profile_app-19d9985bea938563.js';
+const wasm = await init({ module_or_path: '/my_profile_app/my_profile_app-19d9985bea938563_bg.wasm' });
 
 
 window.wasmBindings = bindings;
