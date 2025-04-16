@@ -33,8 +33,8 @@ fn navbar() -> Html {
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/my_profile_app/#/">{"Home"}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/my_profile_app/#/about">{"About"}</a></li>
+                        <li class="nav-item"><Link<Route> classes="nav-link" to={Route::Home}>{"Home"}</Link<Route>></li>
+                        <li class="nav-item"><Link<Route> classes="nav-link" to={Route::About}>{"About"}</Link<Route>></li>
                     </ul>
                 </div>
             </div>
@@ -45,12 +45,12 @@ fn navbar() -> Html {
 #[function_component(App)] // アプリのルートコンポーネント (第2章)
 fn app() -> Html {
     html! {
-        <HashRouter>
+        <BrowserRouter>
             <NavBar />
             <div class="container mt-4">
                 <Switch<Route> render={switch} />
             </div>
-        </HashRouter>
+        </BrowserRouter>
     }
 }
 

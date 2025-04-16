@@ -4,8 +4,15 @@ use crate::components::fetch_data::FetchData;
 use crate::components::input_form::InputForm;
 use crate::components::profile::Profile;
 
+use super::utils::set_meta;
+
 #[function_component(Home)] // コンポーネント (第2章)
 pub fn home() -> Html {
+    use_effect(|| {
+        set_meta("Home | My Profile App", "トップページです");
+        || ()
+    });
+
     html! {
         <div class="main-container">
             <h1 class="text-primary fw-bold">{ "Welcome to My Profile App" }</h1>
