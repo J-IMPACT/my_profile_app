@@ -2,8 +2,9 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
+    <title>Loading...</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Profile App</title>
+    <meta name="description" content="Loading Yew app..." />
 
     <!-- BootstrapのCDNを適用 (CSSフレームワーク) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -14,22 +15,15 @@
     <!-- styles.cssを適用 (CSSの適用方法) -->
     <link rel="stylesheet" href="/my_profile_app/styles-c48f97d0d3db51.css" integrity="sha384-cM/g9+gxXnu4SPCOHG2EP1Gj49fXnXeziZlP/dWhmD3xGWUdkMsVlhYh3vAsEFEu"/>
 
-    <script>
-        (function() {
-            const path = window.location.pathname;
-            if (!path.startsWith("/my_profile_app/#/") && path !== "/my_profile_app/") {
-                window.location.replace("/my_profile_app/#/");
-            }
-        })
-    </script>
-<link rel="modulepreload" href="/my_profile_app/my_profile_app-19d9985bea938563.js" crossorigin="anonymous" integrity="sha384-RNehOtKReutf9twLFvqy/QCUHs8/ks+/AGlyE5bx5hGfHkZjDtty+IPb9S6UYCxR"><link rel="preload" href="/my_profile_app/my_profile_app-19d9985bea938563_bg.wasm" crossorigin="anonymous" integrity="sha384-OCiaO5loWrrzcZF+ALVA8DPAnedL+WIyCBVxjLGJ8D1YbXJjPrbtrUieqHU+k8cc" as="fetch" type="application/wasm"></head>
+    <base href="/my_profile_app/" />
+<link rel="modulepreload" href="/my_profile_app/my_profile_app-684ef0326c45cb7.js" crossorigin="anonymous" integrity="sha384-N6mEyvdSb4us21/0T3lJRkRhQqBIwUsNGNQFSg5R5UoB2QuUg4qkOKYmFS9JqVgy"><link rel="preload" href="/my_profile_app/my_profile_app-684ef0326c45cb7_bg.wasm" crossorigin="anonymous" integrity="sha384-AQI7h4DuO0lGhUvtvUnRQrgbf/szeQHl9klQoucjrkeQ2EAIdEhawTgOx/5JEwcy" as="fetch" type="application/wasm"></head>
 <body class="container bg-light">
     <!-- BootstrapのJS（モバイルナビゲーションの動作用） -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script type="module">
-import init, * as bindings from '/my_profile_app/my_profile_app-19d9985bea938563.js';
-const wasm = await init({ module_or_path: '/my_profile_app/my_profile_app-19d9985bea938563_bg.wasm' });
+import init, * as bindings from '/my_profile_app/my_profile_app-684ef0326c45cb7.js';
+const wasm = await init({ module_or_path: '/my_profile_app/my_profile_app-684ef0326c45cb7_bg.wasm' });
 
 
 window.wasmBindings = bindings;
