@@ -1,7 +1,7 @@
 use web_sys::HtmlInputElement;
 use yew::prelude::*;
 
-/// 入力フォームコンポーネント (イベントハンドリング)
+/// 入力フォーム
 #[function_component(InputForm)]
 pub fn input_form() -> Html {
     let input_value = use_state(|| "".to_string());

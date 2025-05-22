@@ -2,18 +2,21 @@ use serde::Deserialize;
 use wasm_bindgen_futures::spawn_local;
 use yew::prelude::*;
 
+// APIデータ取得用構造体①
 #[derive(Deserialize, Debug, Clone, PartialEq)]
 struct ApiResponseStoic {
     text: String,
     author: String,
 }
 
+// APIデータ取得用構造体②
 #[derive(Deserialize, Debug, Clone, PartialEq)]
 struct ApiResponseZenn {
     q: String,
     a: String,
 }
 
+// APIデータ取得
 #[function_component(FetchData)]
 pub fn fetch_data() -> Html {
     let quote_stoic = use_state(|| None);

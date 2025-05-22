@@ -7,6 +7,7 @@ mod pages;
 use pages::home::Home;
 use pages::about::About;
 
+// ルーティング
 #[derive(Clone, Routable, PartialEq)]
 enum Route {
     #[at("/")]
@@ -17,11 +18,12 @@ enum Route {
 
 fn switch(route: Route) -> Html {
     match route {
-        Route::Home => html! { <Home /> }, // ホームページ (第3章)
-        Route::About => html! { <About /> }, // 別ページ (第3章)
+        Route::Home => html! { <Home /> }, // ホームページ
+        Route::About => html! { <About /> }, // サブページ
     }
 }
 
+// ナビゲーションバー
 #[function_component(NavBar)]
 fn navbar() -> Html {
     html! {
@@ -42,7 +44,8 @@ fn navbar() -> Html {
     }
 }
 
-#[function_component(App)] // アプリのルートコンポーネント (第2章)
+// アプリのルートコンポーネント
+#[function_component(App)] 
 fn app() -> Html {
     html! {
         <BrowserRouter>

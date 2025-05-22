@@ -1,14 +1,15 @@
 use yew::prelude::*;
 
-#[derive(Properties, PartialEq)] // Props (第2章)
+#[derive(Properties, PartialEq)]
 pub struct ProfileProps {
     pub name: String,
     pub bio: String,
 }
 
+// 自己紹介ボタン
 #[function_component(Profile)]
 pub fn profile(props: &ProfileProps) -> Html {
-    let show_info = use_state(|| false); // 状態管理 (第2章)
+    let show_info = use_state(|| false);
 
     let toggle_info = {
         let show_info = show_info.clone();
