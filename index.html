@@ -12,18 +12,18 @@
     <!-- Google Fonts 適用 -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap">
 
-    <!-- styles.cssを適用 (CSSの適用方法) -->
+    <!-- styles.cssを適用 -->
     <link rel="stylesheet" href="/my_profile_app/styles-c48f97d0d3db51.css" integrity="sha384-cM/g9+gxXnu4SPCOHG2EP1Gj49fXnXeziZlP/dWhmD3xGWUdkMsVlhYh3vAsEFEu"/>
 
     <base href="/my_profile_app/" />
-<link rel="modulepreload" href="/my_profile_app/my_profile_app-684ef0326c45cb7.js" crossorigin="anonymous" integrity="sha384-N6mEyvdSb4us21/0T3lJRkRhQqBIwUsNGNQFSg5R5UoB2QuUg4qkOKYmFS9JqVgy"><link rel="preload" href="/my_profile_app/my_profile_app-684ef0326c45cb7_bg.wasm" crossorigin="anonymous" integrity="sha384-AQI7h4DuO0lGhUvtvUnRQrgbf/szeQHl9klQoucjrkeQ2EAIdEhawTgOx/5JEwcy" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/my_profile_app/my_profile_app-763a435ecf8109d9.js" crossorigin="anonymous" integrity="sha384-/CI12orMITgKG1HW/mepFGkF3ge07gf1/g8/fvrPz0tNQxY88HKm1yzYsgWTuMyQ"><link rel="preload" href="/my_profile_app/my_profile_app-763a435ecf8109d9_bg.wasm" crossorigin="anonymous" integrity="sha384-NApshhMGY8KmQJ51Oj9LrZ1fcnCmzcgNJagmy5/g0jp9+GUGbRVn+gT7zjs6RdRO" as="fetch" type="application/wasm"></head>
 <body class="container bg-light">
     <!-- BootstrapのJS（モバイルナビゲーションの動作用） -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script type="module">
-import init, * as bindings from '/my_profile_app/my_profile_app-684ef0326c45cb7.js';
-const wasm = await init({ module_or_path: '/my_profile_app/my_profile_app-684ef0326c45cb7_bg.wasm' });
+import init, * as bindings from '/my_profile_app/my_profile_app-763a435ecf8109d9.js';
+const wasm = await init({ module_or_path: '/my_profile_app/my_profile_app-763a435ecf8109d9_bg.wasm' });
 
 
 window.wasmBindings = bindings;
