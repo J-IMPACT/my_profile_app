@@ -22,6 +22,14 @@
     <link data-trunk rel="copy-file" href="404.html">
 
     <base data-trunk-public-url />
+
+    <script>
+        if (sessionStorage.redirect) {
+            const redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            history.replaceState(null, "", redirect);
+        }
+    </script>
 </head>
 <body class="container bg-light">
     <!-- BootstrapのJS（モバイルナビゲーションの動作用） -->
