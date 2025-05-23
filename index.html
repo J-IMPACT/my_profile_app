@@ -22,6 +22,14 @@
     
 
     <base href="/my_profile_app/" />
+
+    <script>
+        if (sessionStorage.redirect) {
+            const redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            history.replaceState(null, "", redirect);
+        }
+    </script>
 <link rel="modulepreload" href="/my_profile_app/my_profile_app-763a435ecf8109d9.js" crossorigin="anonymous" integrity="sha384-/CI12orMITgKG1HW/mepFGkF3ge07gf1/g8/fvrPz0tNQxY88HKm1yzYsgWTuMyQ"><link rel="preload" href="/my_profile_app/my_profile_app-763a435ecf8109d9_bg.wasm" crossorigin="anonymous" integrity="sha384-NApshhMGY8KmQJ51Oj9LrZ1fcnCmzcgNJagmy5/g0jp9+GUGbRVn+gT7zjs6RdRO" as="fetch" type="application/wasm"></head>
 <body class="container bg-light">
     <!-- BootstrapのJS（モバイルナビゲーションの動作用） -->
