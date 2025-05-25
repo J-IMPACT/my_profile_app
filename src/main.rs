@@ -6,6 +6,7 @@ mod pages;
 
 use pages::home::Home;
 use pages::about::About;
+use pages::not_found::NotFound;
 
 // ルーティング
 #[derive(Clone, Routable, PartialEq)]
@@ -13,13 +14,18 @@ enum Route {
     #[at("/")]
     Home,
     #[at("/about")]
-    About
+    About,
+
+    #[not_found]
+    #[at("/404")]
+    NotFound
 }
 
 fn switch(route: Route) -> Html {
     match route {
         Route::Home => html! { <Home /> }, // ホームページ
         Route::About => html! { <About /> }, // サブページ
+        Route::NotFound => html! { <NotFound /> } // それ以外のURL
     }
 }
 
