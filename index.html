@@ -30,14 +30,14 @@
             history.replaceState(null, "", redirect);
         }
     </script>
-<link rel="modulepreload" href="/my_profile_app/my_profile_app-763a435ecf8109d9.js" crossorigin="anonymous" integrity="sha384-/CI12orMITgKG1HW/mepFGkF3ge07gf1/g8/fvrPz0tNQxY88HKm1yzYsgWTuMyQ"><link rel="preload" href="/my_profile_app/my_profile_app-763a435ecf8109d9_bg.wasm" crossorigin="anonymous" integrity="sha384-NApshhMGY8KmQJ51Oj9LrZ1fcnCmzcgNJagmy5/g0jp9+GUGbRVn+gT7zjs6RdRO" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/my_profile_app/my_profile_app-f2b65aca297717e7.js" crossorigin="anonymous" integrity="sha384-Ru0Kx94bvs4TqJViGYvkWQ5VQ7ZJgAK3mhy5tSo7iH8Hso7igjcaBaek/LHC9tUq"><link rel="preload" href="/my_profile_app/my_profile_app-f2b65aca297717e7_bg.wasm" crossorigin="anonymous" integrity="sha384-CQLj1cW3tvIRmYG5pi/w6WcGigTlcgDqV3UGzCL77+M60M2PdXwve3UjBx9h4DzQ" as="fetch" type="application/wasm"></head>
 <body class="container bg-light">
     <!-- BootstrapのJS（モバイルナビゲーションの動作用） -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script type="module">
-import init, * as bindings from '/my_profile_app/my_profile_app-763a435ecf8109d9.js';
-const wasm = await init({ module_or_path: '/my_profile_app/my_profile_app-763a435ecf8109d9_bg.wasm' });
+import init, * as bindings from '/my_profile_app/my_profile_app-f2b65aca297717e7.js';
+const wasm = await init({ module_or_path: '/my_profile_app/my_profile_app-f2b65aca297717e7_bg.wasm' });
 
 
 window.wasmBindings = bindings;
