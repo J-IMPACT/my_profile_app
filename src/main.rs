@@ -13,6 +13,7 @@ use pages::not_found::NotFound;
 enum Route {
     #[at("/")]
     Home,
+    
     #[at("/about")]
     About,
 
